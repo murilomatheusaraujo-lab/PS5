@@ -1,0 +1,104 @@
+/*
+  MURILO | NEYMAR x LAMINE YAMAL
+  Tema personalizado para Gamepad Viewer - PlayStation 5
+  Base visual: skin PS5 Penguin (mantém os sprites e estados dos botões).
+*/
+@import url("https://istador.github.io/gamepadviewer-skins/playstation/ps5/penguin/style.css");
+
+/* Fundo e acabamento */
+.custom.controller {
+  position: relative !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 0 1.2vw rgba(0, 180, 255, .28));
+}
+
+/* Faixa de identidade: Neymar à esquerda */
+.custom.controller::before {
+  content: "NEYMAR JR.  •  BRASIL";
+  position: absolute;
+  z-index: 30;
+  pointer-events: none;
+  left: 1.5vw;
+  top: 27vw;
+  width: 22vw;
+  padding: 1.1vw .8vw;
+  box-sizing: border-box;
+  border-left: .45vw solid #19c46b;
+  border-bottom: .12vw solid rgba(255,255,255,.55);
+  background: linear-gradient(90deg, rgba(0,70,38,.92), rgba(0,70,38,0));
+  color: #fff;
+  font: 900 2.05vw/1.1 Arial, sans-serif;
+  letter-spacing: .06em;
+  text-shadow: 0 .15vw .45vw #000;
+  white-space: nowrap;
+}
+
+/* Faixa de identidade: Lamine à direita.
+   O ::after só aparece assim quando o controle está conectado. */
+.custom.controller:not(.disconnected)::after {
+  content: "LAMINE YAMAL  •  10";
+  position: absolute;
+  z-index: 30;
+  pointer-events: none;
+  right: 1.5vw;
+  top: 27vw;
+  width: 23vw;
+  padding: 1.1vw .8vw;
+  box-sizing: border-box;
+  text-align: right;
+  border-right: .45vw solid #35a9ff;
+  border-bottom: .12vw solid rgba(255,255,255,.55);
+  background: linear-gradient(270deg, rgba(0,48,110,.94), rgba(0,48,110,0));
+  color: #fff;
+  font: 900 2.05vw/1.1 Arial, sans-serif;
+  letter-spacing: .035em;
+  text-shadow: 0 .15vw .45vw #000;
+  white-space: nowrap;
+}
+
+/* Nome na área central inferior do controle */
+.custom .meta {
+  overflow: visible !important;
+}
+.custom .meta::after {
+  content: "MURILO";
+  position: absolute;
+  left: 50%;
+  top: 6.1vw;
+  transform: translateX(-50%);
+  color: #fff;
+  font: 900 1.35vw/1 Arial, sans-serif;
+  letter-spacing: .22em;
+  text-shadow: 0 0 .35vw #00aaff, 0 .12vw .35vw #000;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Detalhes em azul e verde nos sticks e touchpad */
+.custom .quadrant {
+  filter: hue-rotate(165deg) saturate(1.45) brightness(1.15);
+}
+.custom .stick.pressed,
+.custom .button.pressed,
+.custom .face.pressed,
+.custom .bumper.pressed,
+.custom .trigger.pressed,
+.custom .back.pressed,
+.custom .start.pressed,
+.custom .meta.pressed,
+.custom .touchpad.pressed {
+  filter: brightness(1.25) drop-shadow(0 0 .45vw rgba(0,190,255,.8));
+}
+
+/* Em telas menores, reduz as faixas para não invadir os botões */
+@media (max-width: 700px) {
+  .custom.controller::before,
+  .custom.controller:not(.disconnected)::after {
+    top: 51vw;
+    width: 25vw;
+    font-size: 2.3vw;
+  }
+  .custom .meta::after {
+    font-size: 1.6vw;
+  }
+}
