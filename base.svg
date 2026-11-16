@@ -1,0 +1,11 @@
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1376 768" style="enable-background:new 0 0 1376 768;" xml:space="preserve">
+  <defs>
+    <clipPath id="dualsense-outline">
+      <path d="M 328,15 C 365,15 390,32 412,55 L 964,55 C 986,32 1011,15 1048,15 C 1135,15 1235,68 1285,185 C 1335,302 1372,495 1374,645 C 1376,725 1335,768 1265,768 C 1185,768 1125,705 1075,610 C 1030,525 995,515 920,515 L 456,515 C 381,515 346,525 301,610 C 251,705 191,768 111,768 C 41,768 0,725 2,645 C 4,495 41,302 91,185 C 141,68 241,15 328,15 Z" />
+    </clipPath>
+  </defs>
+
+  <g id="Controller_Base" clip-path="url(#dualsense-outline)">
+    
+  </g>
+</svg>
