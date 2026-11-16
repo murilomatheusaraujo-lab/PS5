@@ -1,1 +1,34 @@
+/*
+  MURILO | NEYMAR x LAMINE YAMAL
+  Skin personalizada para PlayStation 5 (DualSense) no Gamepad Viewer.
+*/
 
+.controller.ds4,
+.controller.ds5,
+.controller.ps5,
+.controller.custom {
+  background: url("https://murilomatheusaraujo-lab.github.io/PS5/controle.png") no-repeat center center !important;
+  background-size: contain !important;
+  position: relative !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 0 12px rgba(0, 180, 255, 0.35));
+}
+
+.controller.ds4 .base,
+.controller.ds5 .base,
+.controller.ps5 .base {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+.controller .stick.pressed,
+.controller .button.pressed,
+.controller .face.pressed,
+.controller .bumper.pressed,
+.controller .trigger.pressed,
+.controller .back.pressed,
+.controller .start.pressed,
+.controller .meta.pressed,
+.controller .touchpad.pressed {
+  filter: brightness(1.35) drop-shadow(0 0 8px rgba(0, 190, 255, 0.9)) !important;
+}
